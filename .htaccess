@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Redirige sitemap.xml vers sitemap.php dynamiquement
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# Gestion d'autres fichiers HTML
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)\.html$ $1.php [L,QSA]
