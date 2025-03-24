@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://rayanchattaoui.com/</loc>
+        <lastmod>2025-03-24</lastmod>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://rayanchattaoui.com/projet.html</loc>
+        <lastmod>2025-03-11</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rayanchattaoui.com/blog.html</loc>
+        <lastmod><br />
+<b>Warning</b>:  filemtime(): stat failed for C:\xampp\htdocs\websiteperso/blog.html in <b>C:\xampp\htdocs\websiteperso\sitemap.php</b> on line <b>18</b><br />
+1970-01-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rayanchattaoui.com/contact.html</loc>
+        <lastmod><br />
+<b>Warning</b>:  filemtime(): stat failed for C:\xampp\htdocs\websiteperso/contact.html in <b>C:\xampp\htdocs\websiteperso\sitemap.php</b> on line <b>18</b><br />
+1970-01-01</lastmod>
+        <priority>0.7</priority>
+    </url>
+</urlset>
+
