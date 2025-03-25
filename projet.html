@@ -1,46 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Rayan Chattaoui - Console Style</title>
-        <link rel="stylesheet" href="style.css"> 
-        <link rel="icon" href="logo.png">
-        <meta name="description" content="Rayan Chattaoui Dévelloppeur Full stacks pationner ">
-        <script src="https://cdn.tailwindcss.com"></script>
-<body>
-    <header>
-        <nav class="relative top-4">
-            <ul class="flex justify-around  items-center">
-                <li><img src="logo.png" alt="logo" class="w-10 justify-start"></li>
-                <li>
-                    <a href="projet.html">Projet</a>
-                    
-                </li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <section class="flex flex-col items-center mt-20">
-            <img src="Rayan.jpg" alt="logo" class="w-40 h-auto rounded-lg">
-            <section class="flex justify-center gap-4 mt-5">
-                <button class="bg-blue-700 text-white rounded-lg px-5 py-2">GitHub</button>
-                <button class="bg-blue-700 text-white rounded-lg px-5 py-2">LinkedIn</button>
-            </section>
-            <section class="flex flex-col items-center mt-80 gap-4">
-                <!-- Ajoute ici d'autres éléments si nécessaire -->
-            </section>
-        </section>
-        
-        <hr>
-            <h1 class="flex flex-col items-center mt-3 justify-center align-center">Projet Rayan Chattaoui</h1>
-        </section>
-    </header>
-    <main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets – Rayan Chattaoui</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.png" />
+  <meta property="og:description" content="Projets réalisés par Rayan Chattaoui, Développeur Fullstack.">
+  <meta property="og:image" content="https://rayanchattaoui.com/img/logo.png">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
 
+  <!-- Header -->
+  <header class="mb-10">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between pt-5">
+      <a href="index.php">
+        <img src="img/logo.png" alt="Logo" class="w-12" />
+      </a>
+      <ul class="flex space-x-8 text-lg text-white">
+        <li><a href="projet.html" class="hover:text-blue-400 transition">Projets</a></li>
+        <li><a href="blog.html" class="hover:text-blue-400 transition">Blog</a></li>
+        <li><a href="contact.html" class="hover:text-blue-400 transition mr-3">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        </section>
-    </main>
-    
+  <!-- Titre -->
+  <h1 class="text-4xl font-bold text-center uppercase tracking-wide 
+             bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent 
+             hover:underline hover:decoration-blue-400 transition-all duration-300 mb-10">
+    Mes projets
+  </h1>
+
+  <!-- Section projets -->
+  <section class="flex flex-col sm:flex-row sm:flex-wrap justify-center items-stretch gap-6 p-6">
+
+    <!-- Gitdiscover -->
+    <section class="flex flex-col justify-between items-center border p-6 rounded-lg shadow-lg max-w-md bg-gray-800 text-white flex-1">
+      <div class="flex flex-col items-center">
+        <img src="img/gitdiscover_logo.png" alt="Gitdiscover" class="w-40 h-auto rounded-full shadow-md">
+        <h3 class="text-2xl font-semibold mt-4">Gitdiscover</h3>
+        <p class="text-gray-300 text-center mt-2">
+          Gitdiscover est un outil qui automatise la structuration et le versionnement des projets en intégrant Git et l'IA. 
+          Il repose sur TinyNLP ainsi qu'une IA spécialement conçue pour collaborer avec TinyNLP et Git local, 
+          offrant ainsi une gestion intelligente et optimisée du versionnement.
+        </p>
+      </div>
+      <div class="mt-6">
+        <a href="https://github.com/Aiglator/gitdiscover" target="_blank" title="Voir le projet GitHub" rel="noopener noreferrer">
+          <button class="rounded-lg border p-2 bg-white hover:bg-blue-400 hover:text-gray-900 transition hover:border-blue-500">
+            <img src="img/github.png" alt="GitHub" class="w-6 h-6">
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- Apibooks -->
+    <section class="flex flex-col justify-between items-center border p-6 rounded-lg shadow-lg max-w-md bg-gray-800 text-white flex-1">
+      <div class="flex flex-col items-center">
+        <img src="img/logoapibooks.png" alt="Apibooks" class="w-40 h-auto rounded-full shadow-md">
+        <h3 class="text-2xl font-semibold mt-4">Apibooks</h3>
+        <p class="text-gray-300 text-center mt-2">
+          ApiBooks est un outil léger et intelligent pour documenter automatiquement vos API Express.
+          Basé sur un fichier openapi.json, il génère une interface web moderne pour consulter vos routes — sans créer de fichier HTML statique.
+          L’interface est intégrée à votre serveur via une URL personnalisable comme /docs, et reste responsive et modifiable selon vos besoins.
+        </p>
+      </div>
+      <div class="flex space-x-4 mt-6">
+        <a href="https://github.com/Aiglator/apibooks" target="_blank" title="Voir le projet GitHub" rel="noopener noreferrer">
+          <button class="rounded-lg border p-2 bg-white hover:bg-blue-400 hover:text-gray-900 transition hover:border-blue-500">
+            <img src="img/github.png" alt="GitHub" class="w-6 h-6">
+          </button>
+        </a>
+        <a href="https://www.npmjs.com/package/apibooks" target="_blank" title="Voir le package NPM" rel="noopener noreferrer">
+          <button class="rounded-lg border p-2 bg-white hover:bg-red-700 hover:text-gray-900 transition hover:border-red-700">
+            <img src="img/Npm.png" alt="NPM" class="w-6 h-6">
+          </button>
+        </a>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-10 mb-10">
+    <p class="text-center text-gray-500">© Rayan Chattaoui - Tous droits réservés</p>
+  </footer>
+
 </body>
 </html>
