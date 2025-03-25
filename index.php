@@ -25,6 +25,12 @@
                 notif.className = "fixed top-5 right-5 bg-green-500 text-white px-6 py-3 rounded shadow-lg z-[999]";
                 document.body.appendChild(notif);
                 setTimeout(() => notif.remove(), 4000);
+
+                // 🔥 Nettoie l'URL pour éviter que le message réapparaisse au reload
+                if (window.history.replaceState) {
+                    const cleanURL = window.location.origin + window.location.pathname;
+                    window.history.replaceState(null, null, cleanURL);
+                }
             <?php endif; ?>
         };
     </script>
@@ -40,7 +46,10 @@
             <ul class="flex space-x-8 text-lg text-white">
                 <li><a href="projet.html" class="hover:text-blue-400 transition">Projets</a></li>
                 <li><a href="#" onclick="alert('Cette section est en cours de création.')" class="hover:text-blue-400 transition cursor-pointer">Blog</a></li>
-                <li><a href="contact.html" class="hover:text-blue-400 transition mr-3">Contact</a></li>
+                <li>  <a href="#" onclick="document.getElementById('contactModal').classList.remove('hidden')" 
+                class="hover:text-blue-400 transition mr-3 cursor-pointer">
+                Contact</a>
+                </li>
             </ul>
         </nav>
         <section class="flex flex-col mt-80 justify-center gap-4  items-center">
