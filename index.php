@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rayan Chattaoui</title>
+    <?php $successMessage = $_GET['success'] ?? null; ?>
     <link rel="stylesheet" href="style.css"> 
-    <link rel="icon" href="logo.png">
+    <link rel="icon" href="limg/logo.png">
     <meta property="og:description" content="Découvrez les projets et compétences de Rayan Chattaoui, Développeur Fullstack.">
     <meta property="og:image" content="https://rayanchattaoui.com/img/logo.png">
     <meta property="og:type" content="website">
     <meta name="google-site-verification" content="ozO7-CTwsNgU-GcCi49T_9FHuibIMEc2EXoLHf5ZShc" />    
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function closeModal() {
+            document.getElementById('contactModal').classList.add('hidden');
+        }
+
+        window.onload = () => {
+            <?php if ($successMessage): ?>
+                closeModal();
+                const notif = document.createElement("div");
+                notif.textContent = "<?= htmlspecialchars($successMessage) ?>";
+                notif.className = "fixed top-5 right-5 bg-green-500 text-white px-6 py-3 rounded shadow-lg z-[999]";
+                document.body.appendChild(notif);
+                setTimeout(() => notif.remove(), 4000);
+            <?php endif; ?>
+        };
+    </script>
 <body>
     <header>
         <nav class="max-w-6xl mx-auto flex items-center justify-between ">
@@ -59,12 +76,14 @@
         <form action="contact.php" method="POST" class="space-y-4">
             <input type="text" name="name" placeholder="Ton nom" required class="w-full border p-2 rounded" />
             <input type="email" name="email" placeholder="Ton email" required class="w-full border p-2 rounded" />
+            <input type="text" name="subject" placeholder="Objet du message" required class="w-full border p-2 rounded" />
             <textarea name="message" placeholder="Ton message" required class="w-full border p-2 rounded"></textarea>
-            <div class="flex justify-end space-x-2">
-                <button type="button" onclick="document.getElementById('contactModal').classList.add('hidden')" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Annuler</button>
-                <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Envoyer</button>
-            </div>
-        </form>
+    <div class="flex justify-end space-x-2">
+            <button type="button" onclick="closeModal()" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Annuler</button>
+            <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Envoyer</button>
+    </div>
+</form>
+
     </div>
 </div>
 
