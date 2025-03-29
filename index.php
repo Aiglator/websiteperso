@@ -12,6 +12,7 @@
     <meta property="og:type" content="website">
     <meta name="google-site-verification" content="ozO7-CTwsNgU-GcCi49T_9FHuibIMEc2EXoLHf5ZShc" />    
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
     <script>
         function closeModal() {
             document.getElementById('contactModal').classList.add('hidden');
@@ -87,6 +88,8 @@
             <input type="email" name="email" placeholder="Ton email" required class="w-full border p-2 rounded" />
             <input type="text" name="subject" placeholder="Objet du message" required class="w-full border p-2 rounded" />
             <textarea name="message" placeholder="Ton message" required class="w-full border p-2 rounded"></textarea>
+            <div class="h-captcha" data-sitekey="9e9426b2-bc92-47e4-93c0-fe445d7248e4"></div>
+
     <div class="flex justify-end space-x-2">
             <button type="button" onclick="closeModal()" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Annuler</button>
             <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Envoyer</button>

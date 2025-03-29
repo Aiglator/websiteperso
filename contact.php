@@ -1,5 +1,20 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // 🔒 Remplace cette clé par TA CLÉ SECRÈTE (pas la site key)
+    $secretKey = "";
+    $hcaptchaResponse = $_POST['h-captcha-response'] ?? '';
+
+    // 1. Vérification hCaptcha
+    $verify = file_get_contents("https://hcaptcha.com/siteverify?secret=" . $secretKey . "&response=" . $hcaptchaResponse);
+    $captchaSuccess = json_decode($verify);
+
+    if (!$captchaSuccess->success) {
+        // ❌ Si hCaptcha échoue
+        header("Location: index.php?success=" . urlencode("Échec du hCaptcha, merci de réessayer."));
+        exit;
+    }
+
+    // 2. Envoi du mail (si hCaptcha réussi)
     $to = "contact@rayanchattaoui.com"; // Ton adresse
     $subject = htmlspecialchars($_POST["subject"] ?? "Nouveau message du formulaire");
     $name = htmlspecialchars($_POST["name"] ?? "");
